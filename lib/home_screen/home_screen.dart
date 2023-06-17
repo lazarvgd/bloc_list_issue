@@ -34,9 +34,10 @@ class HomeScreen extends StatelessWidget {
                 ),
               ],
             ),
-            appBar: AppBar(),
+            appBar: AppBar(),//sorry about last min editing
             body: BlocBuilder<HomeScreenBloc, HomeScreenState>(
               builder: (context, state) {
+                debugPrint('state: $state');
                 return state.when(
                   initial: () {
                     return const Center(

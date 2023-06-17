@@ -6,5 +6,5 @@ class HomeScreenState with _$HomeScreenState {
   const factory HomeScreenState.loading() = _Loading;
   const factory HomeScreenState.loaded({required List<Coin> coins, required DateTime currentTime}) = _Loaded;
   const factory HomeScreenState.error() = _Error;
-
+//I already have commited the code with date and time, so here is the demo...
 }
