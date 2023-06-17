@@ -438,7 +438,7 @@ mixin _$HomeScreenState {
   TResult when<TResult extends Object?>({
     required TResult Function() initial,
     required TResult Function() loading,
-    required TResult Function(List<Coin> coins, DateTime currentTime) loaded,
+    required TResult Function(List<Coin> coins) loaded,
     required TResult Function() error,
   }) =>
       throw _privateConstructorUsedError;
@@ -446,7 +446,7 @@ mixin _$HomeScreenState {
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function()? initial,
     TResult? Function()? loading,
-    TResult? Function(List<Coin> coins, DateTime currentTime)? loaded,
+    TResult? Function(List<Coin> coins)? loaded,
     TResult? Function()? error,
   }) =>
       throw _privateConstructorUsedError;
@@ -454,7 +454,7 @@ mixin _$HomeScreenState {
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? initial,
     TResult Function()? loading,
-    TResult Function(List<Coin> coins, DateTime currentTime)? loaded,
+    TResult Function(List<Coin> coins)? loaded,
     TResult Function()? error,
     required TResult orElse(),
   }) =>
@@ -543,7 +543,7 @@ class _$_Initial implements _Initial {
   TResult when<TResult extends Object?>({
     required TResult Function() initial,
     required TResult Function() loading,
-    required TResult Function(List<Coin> coins, DateTime currentTime) loaded,
+    required TResult Function(List<Coin> coins) loaded,
     required TResult Function() error,
   }) {
     return initial();
@@ -554,7 +554,7 @@ class _$_Initial implements _Initial {
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function()? initial,
     TResult? Function()? loading,
-    TResult? Function(List<Coin> coins, DateTime currentTime)? loaded,
+    TResult? Function(List<Coin> coins)? loaded,
     TResult? Function()? error,
   }) {
     return initial?.call();
@@ -565,7 +565,7 @@ class _$_Initial implements _Initial {
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? initial,
     TResult Function()? loading,
-    TResult Function(List<Coin> coins, DateTime currentTime)? loaded,
+    TResult Function(List<Coin> coins)? loaded,
     TResult Function()? error,
     required TResult orElse(),
   }) {
@@ -656,7 +656,7 @@ class _$_Loading implements _Loading {
   TResult when<TResult extends Object?>({
     required TResult Function() initial,
     required TResult Function() loading,
-    required TResult Function(List<Coin> coins, DateTime currentTime) loaded,
+    required TResult Function(List<Coin> coins) loaded,
     required TResult Function() error,
   }) {
     return loading();
@@ -667,7 +667,7 @@ class _$_Loading implements _Loading {
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function()? initial,
     TResult? Function()? loading,
-    TResult? Function(List<Coin> coins, DateTime currentTime)? loaded,
+    TResult? Function(List<Coin> coins)? loaded,
     TResult? Function()? error,
   }) {
     return loading?.call();
@@ -678,7 +678,7 @@ class _$_Loading implements _Loading {
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? initial,
     TResult Function()? loading,
-    TResult Function(List<Coin> coins, DateTime currentTime)? loaded,
+    TResult Function(List<Coin> coins)? loaded,
     TResult Function()? error,
     required TResult orElse(),
   }) {
@@ -735,7 +735,7 @@ abstract class _$$_LoadedCopyWith<$Res> {
   factory _$$_LoadedCopyWith(_$_Loaded value, $Res Function(_$_Loaded) then) =
       __$$_LoadedCopyWithImpl<$Res>;
   @useResult
-  $Res call({List<Coin> coins, DateTime currentTime});
+  $Res call({List<Coin> coins});
 }
 
 /// @nodoc
@@ -749,17 +749,12 @@ class __$$_LoadedCopyWithImpl<$Res>
   @override
   $Res call({
     Object? coins = null,
-    Object? currentTime = null,
   }) {
     return _then(_$_Loaded(
       coins: null == coins
           ? _value._coins
           : coins // ignore: cast_nullable_to_non_nullable
               as List<Coin>,
-      currentTime: null == currentTime
-          ? _value.currentTime
-          : currentTime // ignore: cast_nullable_to_non_nullable
-              as DateTime,
     ));
   }
 }
@@ -767,8 +762,7 @@ class __$$_LoadedCopyWithImpl<$Res>
 /// @nodoc
 
 class _$_Loaded implements _Loaded {
-  const _$_Loaded({required final List<Coin> coins, required this.currentTime})
-      : _coins = coins;
+  const _$_Loaded({required final List<Coin> coins}) : _coins = coins;
 
   final List<Coin> _coins;
   @override
@@ -779,11 +773,8 @@ class _$_Loaded implements _Loaded {
   }
 
   @override
-  final DateTime currentTime;
-
-  @override
   String toString() {
-    return 'HomeScreenState.loaded(coins: $coins, currentTime: $currentTime)';
+    return 'HomeScreenState.loaded(coins: $coins)';
   }
 
   @override
@@ -791,14 +782,12 @@ class _$_Loaded implements _Loaded {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$_Loaded &&
-            const DeepCollectionEquality().equals(other._coins, _coins) &&
-            (identical(other.currentTime, currentTime) ||
-                other.currentTime == currentTime));
+            const DeepCollectionEquality().equals(other._coins, _coins));
   }
 
   @override
-  int get hashCode => Object.hash(
-      runtimeType, const DeepCollectionEquality().hash(_coins), currentTime);
+  int get hashCode =>
+      Object.hash(runtimeType, const DeepCollectionEquality().hash(_coins));
 
   @JsonKey(ignore: true)
   @override
@@ -811,10 +800,10 @@ class _$_Loaded implements _Loaded {
   TResult when<TResult extends Object?>({
     required TResult Function() initial,
     required TResult Function() loading,
-    required TResult Function(List<Coin> coins, DateTime currentTime) loaded,
+    required TResult Function(List<Coin> coins) loaded,
     required TResult Function() error,
   }) {
-    return loaded(coins, currentTime);
+    return loaded(coins);
   }
 
   @override
@@ -822,10 +811,10 @@ class _$_Loaded implements _Loaded {
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function()? initial,
     TResult? Function()? loading,
-    TResult? Function(List<Coin> coins, DateTime currentTime)? loaded,
+    TResult? Function(List<Coin> coins)? loaded,
     TResult? Function()? error,
   }) {
-    return loaded?.call(coins, currentTime);
+    return loaded?.call(coins);
   }
 
   @override
@@ -833,12 +822,12 @@ class _$_Loaded implements _Loaded {
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? initial,
     TResult Function()? loading,
-    TResult Function(List<Coin> coins, DateTime currentTime)? loaded,
+    TResult Function(List<Coin> coins)? loaded,
     TResult Function()? error,
     required TResult orElse(),
   }) {
     if (loaded != null) {
-      return loaded(coins, currentTime);
+      return loaded(coins);
     }
     return orElse();
   }
@@ -882,12 +871,9 @@ class _$_Loaded implements _Loaded {
 }
 
 abstract class _Loaded implements HomeScreenState {
-  const factory _Loaded(
-      {required final List<Coin> coins,
-      required final DateTime currentTime}) = _$_Loaded;
+  const factory _Loaded({required final List<Coin> coins}) = _$_Loaded;
 
   List<Coin> get coins;
-  DateTime get currentTime;
   @JsonKey(ignore: true)
   _$$_LoadedCopyWith<_$_Loaded> get copyWith =>
       throw _privateConstructorUsedError;
@@ -931,7 +917,7 @@ class _$_Error implements _Error {
   TResult when<TResult extends Object?>({
     required TResult Function() initial,
     required TResult Function() loading,
-    required TResult Function(List<Coin> coins, DateTime currentTime) loaded,
+    required TResult Function(List<Coin> coins) loaded,
     required TResult Function() error,
   }) {
     return error();
@@ -942,7 +928,7 @@ class _$_Error implements _Error {
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function()? initial,
     TResult? Function()? loading,
-    TResult? Function(List<Coin> coins, DateTime currentTime)? loaded,
+    TResult? Function(List<Coin> coins)? loaded,
     TResult? Function()? error,
   }) {
     return error?.call();
@@ -953,7 +939,7 @@ class _$_Error implements _Error {
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? initial,
     TResult Function()? loading,
-    TResult Function(List<Coin> coins, DateTime currentTime)? loaded,
+    TResult Function(List<Coin> coins)? loaded,
     TResult Function()? error,
     required TResult orElse(),
   }) {

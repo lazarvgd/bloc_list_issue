@@ -37,7 +37,8 @@ class HomeScreen extends StatelessWidget {
             appBar: AppBar(),//sorry about last min editing
             body: BlocBuilder<HomeScreenBloc, HomeScreenState>(
               builder: (context, state) {
-                debugPrint('state: $state');
+                debugPrint('State $state');
+
                 return state.when(
                   initial: () {
                     return const Center(
@@ -49,7 +50,7 @@ class HomeScreen extends StatelessWidget {
                       child: CircularProgressIndicator(),
                     );
                   },
-                  loaded: (coins, _) {
+                  loaded: (coins) {
                     return ListView.builder(
                       itemCount: coins.length,
                       itemBuilder: (ctx, index) {
