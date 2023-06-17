@@ -18,21 +18,21 @@ final _privateConstructorUsedError = UnsupportedError(
 mixin _$HomeScreenEvent {
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
-    required TResult Function() started,
+    required TResult Function() fetch,
     required TResult Function() refresh,
     required TResult Function(Coin coin) addToFavorites,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult? Function()? started,
+    TResult? Function()? fetch,
     TResult? Function()? refresh,
     TResult? Function(Coin coin)? addToFavorites,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
-    TResult Function()? started,
+    TResult Function()? fetch,
     TResult Function()? refresh,
     TResult Function(Coin coin)? addToFavorites,
     required TResult orElse(),
@@ -40,21 +40,21 @@ mixin _$HomeScreenEvent {
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
-    required TResult Function(_Started value) started,
+    required TResult Function(_Fetch value) fetch,
     required TResult Function(_Refresh value) refresh,
     required TResult Function(_AddToFavorites value) addToFavorites,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
-    TResult? Function(_Started value)? started,
+    TResult? Function(_Fetch value)? fetch,
     TResult? Function(_Refresh value)? refresh,
     TResult? Function(_AddToFavorites value)? addToFavorites,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
-    TResult Function(_Started value)? started,
+    TResult Function(_Fetch value)? fetch,
     TResult Function(_Refresh value)? refresh,
     TResult Function(_AddToFavorites value)? addToFavorites,
     required TResult orElse(),
@@ -81,34 +81,33 @@ class _$HomeScreenEventCopyWithImpl<$Res, $Val extends HomeScreenEvent>
 }
 
 /// @nodoc
-abstract class _$$_StartedCopyWith<$Res> {
-  factory _$$_StartedCopyWith(
-          _$_Started value, $Res Function(_$_Started) then) =
-      __$$_StartedCopyWithImpl<$Res>;
+abstract class _$$_FetchCopyWith<$Res> {
+  factory _$$_FetchCopyWith(_$_Fetch value, $Res Function(_$_Fetch) then) =
+      __$$_FetchCopyWithImpl<$Res>;
 }
 
 /// @nodoc
-class __$$_StartedCopyWithImpl<$Res>
-    extends _$HomeScreenEventCopyWithImpl<$Res, _$_Started>
-    implements _$$_StartedCopyWith<$Res> {
-  __$$_StartedCopyWithImpl(_$_Started _value, $Res Function(_$_Started) _then)
+class __$$_FetchCopyWithImpl<$Res>
+    extends _$HomeScreenEventCopyWithImpl<$Res, _$_Fetch>
+    implements _$$_FetchCopyWith<$Res> {
+  __$$_FetchCopyWithImpl(_$_Fetch _value, $Res Function(_$_Fetch) _then)
       : super(_value, _then);
 }
 
 /// @nodoc
 
-class _$_Started implements _Started {
-  const _$_Started();
+class _$_Fetch implements _Fetch {
+  const _$_Fetch();
 
   @override
   String toString() {
-    return 'HomeScreenEvent.started()';
+    return 'HomeScreenEvent.fetch()';
   }
 
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
-        (other.runtimeType == runtimeType && other is _$_Started);
+        (other.runtimeType == runtimeType && other is _$_Fetch);
   }
 
   @override
@@ -117,33 +116,33 @@ class _$_Started implements _Started {
   @override
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
-    required TResult Function() started,
+    required TResult Function() fetch,
     required TResult Function() refresh,
     required TResult Function(Coin coin) addToFavorites,
   }) {
-    return started();
+    return fetch();
   }
 
   @override
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult? Function()? started,
+    TResult? Function()? fetch,
     TResult? Function()? refresh,
     TResult? Function(Coin coin)? addToFavorites,
   }) {
-    return started?.call();
+    return fetch?.call();
   }
 
   @override
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
-    TResult Function()? started,
+    TResult Function()? fetch,
     TResult Function()? refresh,
     TResult Function(Coin coin)? addToFavorites,
     required TResult orElse(),
   }) {
-    if (started != null) {
-      return started();
+    if (fetch != null) {
+      return fetch();
     }
     return orElse();
   }
@@ -151,40 +150,40 @@ class _$_Started implements _Started {
   @override
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
-    required TResult Function(_Started value) started,
+    required TResult Function(_Fetch value) fetch,
     required TResult Function(_Refresh value) refresh,
     required TResult Function(_AddToFavorites value) addToFavorites,
   }) {
-    return started(this);
+    return fetch(this);
   }
 
   @override
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
-    TResult? Function(_Started value)? started,
+    TResult? Function(_Fetch value)? fetch,
     TResult? Function(_Refresh value)? refresh,
     TResult? Function(_AddToFavorites value)? addToFavorites,
   }) {
-    return started?.call(this);
+    return fetch?.call(this);
   }
 
   @override
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
-    TResult Function(_Started value)? started,
+    TResult Function(_Fetch value)? fetch,
     TResult Function(_Refresh value)? refresh,
     TResult Function(_AddToFavorites value)? addToFavorites,
     required TResult orElse(),
   }) {
-    if (started != null) {
-      return started(this);
+    if (fetch != null) {
+      return fetch(this);
     }
     return orElse();
   }
 }
 
-abstract class _Started implements HomeScreenEvent {
-  const factory _Started() = _$_Started;
+abstract class _Fetch implements HomeScreenEvent {
+  const factory _Fetch() = _$_Fetch;
 }
 
 /// @nodoc
@@ -224,7 +223,7 @@ class _$_Refresh implements _Refresh {
   @override
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
-    required TResult Function() started,
+    required TResult Function() fetch,
     required TResult Function() refresh,
     required TResult Function(Coin coin) addToFavorites,
   }) {
@@ -234,7 +233,7 @@ class _$_Refresh implements _Refresh {
   @override
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult? Function()? started,
+    TResult? Function()? fetch,
     TResult? Function()? refresh,
     TResult? Function(Coin coin)? addToFavorites,
   }) {
@@ -244,7 +243,7 @@ class _$_Refresh implements _Refresh {
   @override
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
-    TResult Function()? started,
+    TResult Function()? fetch,
     TResult Function()? refresh,
     TResult Function(Coin coin)? addToFavorites,
     required TResult orElse(),
@@ -258,7 +257,7 @@ class _$_Refresh implements _Refresh {
   @override
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
-    required TResult Function(_Started value) started,
+    required TResult Function(_Fetch value) fetch,
     required TResult Function(_Refresh value) refresh,
     required TResult Function(_AddToFavorites value) addToFavorites,
   }) {
@@ -268,7 +267,7 @@ class _$_Refresh implements _Refresh {
   @override
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
-    TResult? Function(_Started value)? started,
+    TResult? Function(_Fetch value)? fetch,
     TResult? Function(_Refresh value)? refresh,
     TResult? Function(_AddToFavorites value)? addToFavorites,
   }) {
@@ -278,7 +277,7 @@ class _$_Refresh implements _Refresh {
   @override
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
-    TResult Function(_Started value)? started,
+    TResult Function(_Fetch value)? fetch,
     TResult Function(_Refresh value)? refresh,
     TResult Function(_AddToFavorites value)? addToFavorites,
     required TResult orElse(),
@@ -358,7 +357,7 @@ class _$_AddToFavorites implements _AddToFavorites {
   @override
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
-    required TResult Function() started,
+    required TResult Function() fetch,
     required TResult Function() refresh,
     required TResult Function(Coin coin) addToFavorites,
   }) {
@@ -368,7 +367,7 @@ class _$_AddToFavorites implements _AddToFavorites {
   @override
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult? Function()? started,
+    TResult? Function()? fetch,
     TResult? Function()? refresh,
     TResult? Function(Coin coin)? addToFavorites,
   }) {
@@ -378,7 +377,7 @@ class _$_AddToFavorites implements _AddToFavorites {
   @override
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
-    TResult Function()? started,
+    TResult Function()? fetch,
     TResult Function()? refresh,
     TResult Function(Coin coin)? addToFavorites,
     required TResult orElse(),
@@ -392,7 +391,7 @@ class _$_AddToFavorites implements _AddToFavorites {
   @override
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
-    required TResult Function(_Started value) started,
+    required TResult Function(_Fetch value) fetch,
     required TResult Function(_Refresh value) refresh,
     required TResult Function(_AddToFavorites value) addToFavorites,
   }) {
@@ -402,7 +401,7 @@ class _$_AddToFavorites implements _AddToFavorites {
   @override
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
-    TResult? Function(_Started value)? started,
+    TResult? Function(_Fetch value)? fetch,
     TResult? Function(_Refresh value)? refresh,
     TResult? Function(_AddToFavorites value)? addToFavorites,
   }) {
@@ -412,7 +411,7 @@ class _$_AddToFavorites implements _AddToFavorites {
   @override
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
-    TResult Function(_Started value)? started,
+    TResult Function(_Fetch value)? fetch,
     TResult Function(_Refresh value)? refresh,
     TResult Function(_AddToFavorites value)? addToFavorites,
     required TResult orElse(),
@@ -439,7 +438,7 @@ mixin _$HomeScreenState {
   TResult when<TResult extends Object?>({
     required TResult Function() initial,
     required TResult Function() loading,
-    required TResult Function(List<Coin> coins) loaded,
+    required TResult Function(List<Coin> coins, DateTime currentTime) loaded,
     required TResult Function() error,
   }) =>
       throw _privateConstructorUsedError;
@@ -447,7 +446,7 @@ mixin _$HomeScreenState {
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function()? initial,
     TResult? Function()? loading,
-    TResult? Function(List<Coin> coins)? loaded,
+    TResult? Function(List<Coin> coins, DateTime currentTime)? loaded,
     TResult? Function()? error,
   }) =>
       throw _privateConstructorUsedError;
@@ -455,7 +454,7 @@ mixin _$HomeScreenState {
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? initial,
     TResult Function()? loading,
-    TResult Function(List<Coin> coins)? loaded,
+    TResult Function(List<Coin> coins, DateTime currentTime)? loaded,
     TResult Function()? error,
     required TResult orElse(),
   }) =>
@@ -544,7 +543,7 @@ class _$_Initial implements _Initial {
   TResult when<TResult extends Object?>({
     required TResult Function() initial,
     required TResult Function() loading,
-    required TResult Function(List<Coin> coins) loaded,
+    required TResult Function(List<Coin> coins, DateTime currentTime) loaded,
     required TResult Function() error,
   }) {
     return initial();
@@ -555,7 +554,7 @@ class _$_Initial implements _Initial {
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function()? initial,
     TResult? Function()? loading,
-    TResult? Function(List<Coin> coins)? loaded,
+    TResult? Function(List<Coin> coins, DateTime currentTime)? loaded,
     TResult? Function()? error,
   }) {
     return initial?.call();
@@ -566,7 +565,7 @@ class _$_Initial implements _Initial {
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? initial,
     TResult Function()? loading,
-    TResult Function(List<Coin> coins)? loaded,
+    TResult Function(List<Coin> coins, DateTime currentTime)? loaded,
     TResult Function()? error,
     required TResult orElse(),
   }) {
@@ -657,7 +656,7 @@ class _$_Loading implements _Loading {
   TResult when<TResult extends Object?>({
     required TResult Function() initial,
     required TResult Function() loading,
-    required TResult Function(List<Coin> coins) loaded,
+    required TResult Function(List<Coin> coins, DateTime currentTime) loaded,
     required TResult Function() error,
   }) {
     return loading();
@@ -668,7 +667,7 @@ class _$_Loading implements _Loading {
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function()? initial,
     TResult? Function()? loading,
-    TResult? Function(List<Coin> coins)? loaded,
+    TResult? Function(List<Coin> coins, DateTime currentTime)? loaded,
     TResult? Function()? error,
   }) {
     return loading?.call();
@@ -679,7 +678,7 @@ class _$_Loading implements _Loading {
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? initial,
     TResult Function()? loading,
-    TResult Function(List<Coin> coins)? loaded,
+    TResult Function(List<Coin> coins, DateTime currentTime)? loaded,
     TResult Function()? error,
     required TResult orElse(),
   }) {
@@ -736,7 +735,7 @@ abstract class _$$_LoadedCopyWith<$Res> {
   factory _$$_LoadedCopyWith(_$_Loaded value, $Res Function(_$_Loaded) then) =
       __$$_LoadedCopyWithImpl<$Res>;
   @useResult
-  $Res call({List<Coin> coins});
+  $Res call({List<Coin> coins, DateTime currentTime});
 }
 
 /// @nodoc
@@ -750,12 +749,17 @@ class __$$_LoadedCopyWithImpl<$Res>
   @override
   $Res call({
     Object? coins = null,
+    Object? currentTime = null,
   }) {
     return _then(_$_Loaded(
       coins: null == coins
           ? _value._coins
           : coins // ignore: cast_nullable_to_non_nullable
               as List<Coin>,
+      currentTime: null == currentTime
+          ? _value.currentTime
+          : currentTime // ignore: cast_nullable_to_non_nullable
+              as DateTime,
     ));
   }
 }
@@ -763,7 +767,8 @@ class __$$_LoadedCopyWithImpl<$Res>
 /// @nodoc
 
 class _$_Loaded implements _Loaded {
-  const _$_Loaded({required final List<Coin> coins}) : _coins = coins;
+  const _$_Loaded({required final List<Coin> coins, required this.currentTime})
+      : _coins = coins;
 
   final List<Coin> _coins;
   @override
@@ -774,8 +779,11 @@ class _$_Loaded implements _Loaded {
   }
 
   @override
+  final DateTime currentTime;
+
+  @override
   String toString() {
-    return 'HomeScreenState.loaded(coins: $coins)';
+    return 'HomeScreenState.loaded(coins: $coins, currentTime: $currentTime)';
   }
 
   @override
@@ -783,12 +791,14 @@ class _$_Loaded implements _Loaded {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$_Loaded &&
-            const DeepCollectionEquality().equals(other._coins, _coins));
+            const DeepCollectionEquality().equals(other._coins, _coins) &&
+            (identical(other.currentTime, currentTime) ||
+                other.currentTime == currentTime));
   }
 
   @override
-  int get hashCode =>
-      Object.hash(runtimeType, const DeepCollectionEquality().hash(_coins));
+  int get hashCode => Object.hash(
+      runtimeType, const DeepCollectionEquality().hash(_coins), currentTime);
 
   @JsonKey(ignore: true)
   @override
@@ -801,10 +811,10 @@ class _$_Loaded implements _Loaded {
   TResult when<TResult extends Object?>({
     required TResult Function() initial,
     required TResult Function() loading,
-    required TResult Function(List<Coin> coins) loaded,
+    required TResult Function(List<Coin> coins, DateTime currentTime) loaded,
     required TResult Function() error,
   }) {
-    return loaded(coins);
+    return loaded(coins, currentTime);
   }
 
   @override
@@ -812,10 +822,10 @@ class _$_Loaded implements _Loaded {
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function()? initial,
     TResult? Function()? loading,
-    TResult? Function(List<Coin> coins)? loaded,
+    TResult? Function(List<Coin> coins, DateTime currentTime)? loaded,
     TResult? Function()? error,
   }) {
-    return loaded?.call(coins);
+    return loaded?.call(coins, currentTime);
   }
 
   @override
@@ -823,12 +833,12 @@ class _$_Loaded implements _Loaded {
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? initial,
     TResult Function()? loading,
-    TResult Function(List<Coin> coins)? loaded,
+    TResult Function(List<Coin> coins, DateTime currentTime)? loaded,
     TResult Function()? error,
     required TResult orElse(),
   }) {
     if (loaded != null) {
-      return loaded(coins);
+      return loaded(coins, currentTime);
     }
     return orElse();
   }
@@ -872,9 +882,12 @@ class _$_Loaded implements _Loaded {
 }
 
 abstract class _Loaded implements HomeScreenState {
-  const factory _Loaded({required final List<Coin> coins}) = _$_Loaded;
+  const factory _Loaded(
+      {required final List<Coin> coins,
+      required final DateTime currentTime}) = _$_Loaded;
 
   List<Coin> get coins;
+  DateTime get currentTime;
   @JsonKey(ignore: true)
   _$$_LoadedCopyWith<_$_Loaded> get copyWith =>
       throw _privateConstructorUsedError;
@@ -918,7 +931,7 @@ class _$_Error implements _Error {
   TResult when<TResult extends Object?>({
     required TResult Function() initial,
     required TResult Function() loading,
-    required TResult Function(List<Coin> coins) loaded,
+    required TResult Function(List<Coin> coins, DateTime currentTime) loaded,
     required TResult Function() error,
   }) {
     return error();
@@ -929,7 +942,7 @@ class _$_Error implements _Error {
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function()? initial,
     TResult? Function()? loading,
-    TResult? Function(List<Coin> coins)? loaded,
+    TResult? Function(List<Coin> coins, DateTime currentTime)? loaded,
     TResult? Function()? error,
   }) {
     return error?.call();
@@ -940,7 +953,7 @@ class _$_Error implements _Error {
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? initial,
     TResult Function()? loading,
-    TResult Function(List<Coin> coins)? loaded,
+    TResult Function(List<Coin> coins, DateTime currentTime)? loaded,
     TResult Function()? error,
     required TResult orElse(),
   }) {

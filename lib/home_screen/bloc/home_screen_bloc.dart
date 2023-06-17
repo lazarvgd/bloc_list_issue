@@ -25,7 +25,7 @@ class HomeScreenBloc extends Bloc<HomeScreenEvent, HomeScreenState> {
   ];
 
   HomeScreenBloc() : super(const HomeScreenState.initial()) {
-    on<_Started>(_onStarted);
+    on<_Fetch>(_onStarted);
     on<_AddToFavorites>(_onAddToFavorites);
     on<_Refresh>(_onRefresh);
   }
@@ -33,14 +33,14 @@ class HomeScreenBloc extends Bloc<HomeScreenEvent, HomeScreenState> {
   FutureOr<void> _onStarted(event, emit) async {
     emit(const HomeScreenState.loading());
     await Future.delayed(const Duration(milliseconds: 1500));
-    emit(HomeScreenState.loaded(coins: coins));
+    emit(HomeScreenState.loaded(coins: coins, currentTime: DateTime.now()));
   }
 
   FutureOr<void> _onAddToFavorites(
       _AddToFavorites event, Emitter<HomeScreenState> emit) async {
     final favoriteCoin = event.coin;
     favoriteCoin.isFavorite = !favoriteCoin.isFavorite;
-    emit(HomeScreenState.loaded(coins: coins));
+    emit(HomeScreenState.loaded(coins: coins, currentTime: DateTime.now()));
   }
 
   FutureOr<void> _onRefresh(
@@ -60,6 +60,6 @@ class HomeScreenBloc extends Bloc<HomeScreenEvent, HomeScreenState> {
       Coin('USD Coin', false),
       Coin('Dogecoin', false),
     ];
-    emit(HomeScreenState.loaded(coins: coins));
+    emit(HomeScreenState.loaded(coins: coins, currentTime: DateTime.now()));
   }
 }

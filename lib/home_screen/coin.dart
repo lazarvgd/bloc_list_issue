@@ -7,6 +7,5 @@ class Coin extends Equatable {
   Coin(this.name, this.isFavorite);
 
   @override
-  // TODO: implement props
   List<Object?> get props => [name, isFavorite];
 }
