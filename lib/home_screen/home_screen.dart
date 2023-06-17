@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:weather/home_screen/bloc/home_screen_bloc.dart';
+import 'package:coins/home_screen/bloc/home_screen_bloc.dart';
 
 class HomeScreen extends StatelessWidget {
   const HomeScreen({super.key});
@@ -37,7 +37,6 @@ class HomeScreen extends StatelessWidget {
             appBar: AppBar(),//sorry about last min editing
             body: BlocBuilder<HomeScreenBloc, HomeScreenState>(
               builder: (context, state) {
-                debugPrint('State $state');
 
                 return state.when(
                   initial: () {
@@ -50,12 +49,12 @@ class HomeScreen extends StatelessWidget {
                       child: CircularProgressIndicator(),
                     );
                   },
-                  loaded: (coins) {
+                  loaded: (coins,_) {
                     return ListView.builder(
                       itemCount: coins.length,
                       itemBuilder: (ctx, index) {
                         return ListTile(
-                            title: Text('Item $index'),
+                            title: Text('${coins[index].name} $index'),
                             trailing: IconButton(
                               icon: Icon(
                                 coins[index].isFavorite

@@ -4,7 +4,7 @@ part of 'home_screen_bloc.dart';
 class HomeScreenState with _$HomeScreenState {
   const factory HomeScreenState.initial() = _Initial;
   const factory HomeScreenState.loading() = _Loading;
-  const factory HomeScreenState.loaded({required List<Coin> coins,}) = _Loaded;
+  const factory HomeScreenState.loaded({required List<Coin> coins, Coin? lastModifiedCoin}) = _Loaded;
   const factory HomeScreenState.error() = _Error;
 
 }

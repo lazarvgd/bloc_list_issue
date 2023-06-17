@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:weather/home_screen/home_screen.dart';
+import 'package:coins/home_screen/home_screen.dart';
 
 void main() {
   runApp(const MyApp());

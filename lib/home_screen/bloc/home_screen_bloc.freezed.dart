@@ -96,12 +96,18 @@ class __$$_FetchCopyWithImpl<$Res>
 
 /// @nodoc
 
-class _$_Fetch implements _Fetch {
+class _$_Fetch with DiagnosticableTreeMixin implements _Fetch {
   const _$_Fetch();
 
   @override
-  String toString() {
+  String toString({DiagnosticLevel minLevel = DiagnosticLevel.info}) {
     return 'HomeScreenEvent.fetch()';
+  }
+
+  @override
+  void debugFillProperties(DiagnosticPropertiesBuilder properties) {
+    super.debugFillProperties(properties);
+    properties.add(DiagnosticsProperty('type', 'HomeScreenEvent.fetch'));
   }
 
   @override
@@ -203,12 +209,18 @@ class __$$_RefreshCopyWithImpl<$Res>
 
 /// @nodoc
 
-class _$_Refresh implements _Refresh {
+class _$_Refresh with DiagnosticableTreeMixin implements _Refresh {
   const _$_Refresh();
 
   @override
-  String toString() {
+  String toString({DiagnosticLevel minLevel = DiagnosticLevel.info}) {
     return 'HomeScreenEvent.refresh()';
+  }
+
+  @override
+  void debugFillProperties(DiagnosticPropertiesBuilder properties) {
+    super.debugFillProperties(properties);
+    properties.add(DiagnosticsProperty('type', 'HomeScreenEvent.refresh'));
   }
 
   @override
@@ -300,6 +312,8 @@ abstract class _$$_AddToFavoritesCopyWith<$Res> {
       __$$_AddToFavoritesCopyWithImpl<$Res>;
   @useResult
   $Res call({Coin coin});
+
+  $CoinCopyWith<$Res> get coin;
 }
 
 /// @nodoc
@@ -322,19 +336,37 @@ class __$$_AddToFavoritesCopyWithImpl<$Res>
               as Coin,
     ));
   }
+
+  @override
+  @pragma('vm:prefer-inline')
+  $CoinCopyWith<$Res> get coin {
+    return $CoinCopyWith<$Res>(_value.coin, (value) {
+      return _then(_value.copyWith(coin: value));
+    });
+  }
 }
 
 /// @nodoc
 
-class _$_AddToFavorites implements _AddToFavorites {
+class _$_AddToFavorites
+    with DiagnosticableTreeMixin
+    implements _AddToFavorites {
   const _$_AddToFavorites({required this.coin});
 
   @override
   final Coin coin;
 
   @override
-  String toString() {
+  String toString({DiagnosticLevel minLevel = DiagnosticLevel.info}) {
     return 'HomeScreenEvent.addToFavorites(coin: $coin)';
+  }
+
+  @override
+  void debugFillProperties(DiagnosticPropertiesBuilder properties) {
+    super.debugFillProperties(properties);
+    properties
+      ..add(DiagnosticsProperty('type', 'HomeScreenEvent.addToFavorites'))
+      ..add(DiagnosticsProperty('coin', coin));
   }
 
   @override
@@ -438,7 +470,7 @@ mixin _$HomeScreenState {
   TResult when<TResult extends Object?>({
     required TResult Function() initial,
     required TResult Function() loading,
-    required TResult Function(List<Coin> coins) loaded,
+    required TResult Function(List<Coin> coins, Coin? lastModifiedCoin) loaded,
     required TResult Function() error,
   }) =>
       throw _privateConstructorUsedError;
@@ -446,7 +478,7 @@ mixin _$HomeScreenState {
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function()? initial,
     TResult? Function()? loading,
-    TResult? Function(List<Coin> coins)? loaded,
+    TResult? Function(List<Coin> coins, Coin? lastModifiedCoin)? loaded,
     TResult? Function()? error,
   }) =>
       throw _privateConstructorUsedError;
@@ -454,7 +486,7 @@ mixin _$HomeScreenState {
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? initial,
     TResult Function()? loading,
-    TResult Function(List<Coin> coins)? loaded,
+    TResult Function(List<Coin> coins, Coin? lastModifiedCoin)? loaded,
     TResult Function()? error,
     required TResult orElse(),
   }) =>
@@ -521,12 +553,18 @@ class __$$_InitialCopyWithImpl<$Res>
 
 /// @nodoc
 
-class _$_Initial implements _Initial {
+class _$_Initial with DiagnosticableTreeMixin implements _Initial {
   const _$_Initial();
 
   @override
-  String toString() {
+  String toString({DiagnosticLevel minLevel = DiagnosticLevel.info}) {
     return 'HomeScreenState.initial()';
+  }
+
+  @override
+  void debugFillProperties(DiagnosticPropertiesBuilder properties) {
+    super.debugFillProperties(properties);
+    properties.add(DiagnosticsProperty('type', 'HomeScreenState.initial'));
   }
 
   @override
@@ -543,7 +581,7 @@ class _$_Initial implements _Initial {
   TResult when<TResult extends Object?>({
     required TResult Function() initial,
     required TResult Function() loading,
-    required TResult Function(List<Coin> coins) loaded,
+    required TResult Function(List<Coin> coins, Coin? lastModifiedCoin) loaded,
     required TResult Function() error,
   }) {
     return initial();
@@ -554,7 +592,7 @@ class _$_Initial implements _Initial {
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function()? initial,
     TResult? Function()? loading,
-    TResult? Function(List<Coin> coins)? loaded,
+    TResult? Function(List<Coin> coins, Coin? lastModifiedCoin)? loaded,
     TResult? Function()? error,
   }) {
     return initial?.call();
@@ -565,7 +603,7 @@ class _$_Initial implements _Initial {
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? initial,
     TResult Function()? loading,
-    TResult Function(List<Coin> coins)? loaded,
+    TResult Function(List<Coin> coins, Coin? lastModifiedCoin)? loaded,
     TResult Function()? error,
     required TResult orElse(),
   }) {
@@ -634,12 +672,18 @@ class __$$_LoadingCopyWithImpl<$Res>
 
 /// @nodoc
 
-class _$_Loading implements _Loading {
+class _$_Loading with DiagnosticableTreeMixin implements _Loading {
   const _$_Loading();
 
   @override
-  String toString() {
+  String toString({DiagnosticLevel minLevel = DiagnosticLevel.info}) {
     return 'HomeScreenState.loading()';
+  }
+
+  @override
+  void debugFillProperties(DiagnosticPropertiesBuilder properties) {
+    super.debugFillProperties(properties);
+    properties.add(DiagnosticsProperty('type', 'HomeScreenState.loading'));
   }
 
   @override
@@ -656,7 +700,7 @@ class _$_Loading implements _Loading {
   TResult when<TResult extends Object?>({
     required TResult Function() initial,
     required TResult Function() loading,
-    required TResult Function(List<Coin> coins) loaded,
+    required TResult Function(List<Coin> coins, Coin? lastModifiedCoin) loaded,
     required TResult Function() error,
   }) {
     return loading();
@@ -667,7 +711,7 @@ class _$_Loading implements _Loading {
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function()? initial,
     TResult? Function()? loading,
-    TResult? Function(List<Coin> coins)? loaded,
+    TResult? Function(List<Coin> coins, Coin? lastModifiedCoin)? loaded,
     TResult? Function()? error,
   }) {
     return loading?.call();
@@ -678,7 +722,7 @@ class _$_Loading implements _Loading {
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? initial,
     TResult Function()? loading,
-    TResult Function(List<Coin> coins)? loaded,
+    TResult Function(List<Coin> coins, Coin? lastModifiedCoin)? loaded,
     TResult Function()? error,
     required TResult orElse(),
   }) {
@@ -735,7 +779,9 @@ abstract class _$$_LoadedCopyWith<$Res> {
   factory _$$_LoadedCopyWith(_$_Loaded value, $Res Function(_$_Loaded) then) =
       __$$_LoadedCopyWithImpl<$Res>;
   @useResult
-  $Res call({List<Coin> coins});
+  $Res call({List<Coin> coins, Coin? lastModifiedCoin});
+
+  $CoinCopyWith<$Res>? get lastModifiedCoin;
 }
 
 /// @nodoc
@@ -749,20 +795,38 @@ class __$$_LoadedCopyWithImpl<$Res>
   @override
   $Res call({
     Object? coins = null,
+    Object? lastModifiedCoin = freezed,
   }) {
     return _then(_$_Loaded(
       coins: null == coins
           ? _value._coins
           : coins // ignore: cast_nullable_to_non_nullable
               as List<Coin>,
+      lastModifiedCoin: freezed == lastModifiedCoin
+          ? _value.lastModifiedCoin
+          : lastModifiedCoin // ignore: cast_nullable_to_non_nullable
+              as Coin?,
     ));
+  }
+
+  @override
+  @pragma('vm:prefer-inline')
+  $CoinCopyWith<$Res>? get lastModifiedCoin {
+    if (_value.lastModifiedCoin == null) {
+      return null;
+    }
+
+    return $CoinCopyWith<$Res>(_value.lastModifiedCoin!, (value) {
+      return _then(_value.copyWith(lastModifiedCoin: value));
+    });
   }
 }
 
 /// @nodoc
 
-class _$_Loaded implements _Loaded {
-  const _$_Loaded({required final List<Coin> coins}) : _coins = coins;
+class _$_Loaded with DiagnosticableTreeMixin implements _Loaded {
+  const _$_Loaded({required final List<Coin> coins, this.lastModifiedCoin})
+      : _coins = coins;
 
   final List<Coin> _coins;
   @override
@@ -773,8 +837,20 @@ class _$_Loaded implements _Loaded {
   }
 
   @override
-  String toString() {
-    return 'HomeScreenState.loaded(coins: $coins)';
+  final Coin? lastModifiedCoin;
+
+  @override
+  String toString({DiagnosticLevel minLevel = DiagnosticLevel.info}) {
+    return 'HomeScreenState.loaded(coins: $coins, lastModifiedCoin: $lastModifiedCoin)';
+  }
+
+  @override
+  void debugFillProperties(DiagnosticPropertiesBuilder properties) {
+    super.debugFillProperties(properties);
+    properties
+      ..add(DiagnosticsProperty('type', 'HomeScreenState.loaded'))
+      ..add(DiagnosticsProperty('coins', coins))
+      ..add(DiagnosticsProperty('lastModifiedCoin', lastModifiedCoin));
   }
 
   @override
@@ -782,12 +858,14 @@ class _$_Loaded implements _Loaded {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$_Loaded &&
-            const DeepCollectionEquality().equals(other._coins, _coins));
+            const DeepCollectionEquality().equals(other._coins, _coins) &&
+            (identical(other.lastModifiedCoin, lastModifiedCoin) ||
+                other.lastModifiedCoin == lastModifiedCoin));
   }
 
   @override
-  int get hashCode =>
-      Object.hash(runtimeType, const DeepCollectionEquality().hash(_coins));
+  int get hashCode => Object.hash(runtimeType,
+      const DeepCollectionEquality().hash(_coins), lastModifiedCoin);
 
   @JsonKey(ignore: true)
   @override
@@ -800,10 +878,10 @@ class _$_Loaded implements _Loaded {
   TResult when<TResult extends Object?>({
     required TResult Function() initial,
     required TResult Function() loading,
-    required TResult Function(List<Coin> coins) loaded,
+    required TResult Function(List<Coin> coins, Coin? lastModifiedCoin) loaded,
     required TResult Function() error,
   }) {
-    return loaded(coins);
+    return loaded(coins, lastModifiedCoin);
   }
 
   @override
@@ -811,10 +889,10 @@ class _$_Loaded implements _Loaded {
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function()? initial,
     TResult? Function()? loading,
-    TResult? Function(List<Coin> coins)? loaded,
+    TResult? Function(List<Coin> coins, Coin? lastModifiedCoin)? loaded,
     TResult? Function()? error,
   }) {
-    return loaded?.call(coins);
+    return loaded?.call(coins, lastModifiedCoin);
   }
 
   @override
@@ -822,12 +900,12 @@ class _$_Loaded implements _Loaded {
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? initial,
     TResult Function()? loading,
-    TResult Function(List<Coin> coins)? loaded,
+    TResult Function(List<Coin> coins, Coin? lastModifiedCoin)? loaded,
     TResult Function()? error,
     required TResult orElse(),
   }) {
     if (loaded != null) {
-      return loaded(coins);
+      return loaded(coins, lastModifiedCoin);
     }
     return orElse();
   }
@@ -871,9 +949,12 @@ class _$_Loaded implements _Loaded {
 }
 
 abstract class _Loaded implements HomeScreenState {
-  const factory _Loaded({required final List<Coin> coins}) = _$_Loaded;
+  const factory _Loaded(
+      {required final List<Coin> coins,
+      final Coin? lastModifiedCoin}) = _$_Loaded;
 
   List<Coin> get coins;
+  Coin? get lastModifiedCoin;
   @JsonKey(ignore: true)
   _$$_LoadedCopyWith<_$_Loaded> get copyWith =>
       throw _privateConstructorUsedError;
@@ -895,12 +976,18 @@ class __$$_ErrorCopyWithImpl<$Res>
 
 /// @nodoc
 
-class _$_Error implements _Error {
+class _$_Error with DiagnosticableTreeMixin implements _Error {
   const _$_Error();
 
   @override
-  String toString() {
+  String toString({DiagnosticLevel minLevel = DiagnosticLevel.info}) {
     return 'HomeScreenState.error()';
+  }
+
+  @override
+  void debugFillProperties(DiagnosticPropertiesBuilder properties) {
+    super.debugFillProperties(properties);
+    properties.add(DiagnosticsProperty('type', 'HomeScreenState.error'));
   }
 
   @override
@@ -917,7 +1004,7 @@ class _$_Error implements _Error {
   TResult when<TResult extends Object?>({
     required TResult Function() initial,
     required TResult Function() loading,
-    required TResult Function(List<Coin> coins) loaded,
+    required TResult Function(List<Coin> coins, Coin? lastModifiedCoin) loaded,
     required TResult Function() error,
   }) {
     return error();
@@ -928,7 +1015,7 @@ class _$_Error implements _Error {
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function()? initial,
     TResult? Function()? loading,
-    TResult? Function(List<Coin> coins)? loaded,
+    TResult? Function(List<Coin> coins, Coin? lastModifiedCoin)? loaded,
     TResult? Function()? error,
   }) {
     return error?.call();
@@ -939,7 +1026,7 @@ class _$_Error implements _Error {
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? initial,
     TResult Function()? loading,
-    TResult Function(List<Coin> coins)? loaded,
+    TResult Function(List<Coin> coins, Coin? lastModifiedCoin)? loaded,
     TResult Function()? error,
     required TResult orElse(),
   }) {

@@ -1,4 +1,4 @@
-# weather
+# coins
 
 A new Flutter project.
 
